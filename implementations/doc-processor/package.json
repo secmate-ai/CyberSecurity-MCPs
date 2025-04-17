@@ -1,0 +1,25 @@
+{
+  "name": "doc-processor",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "MCP server for document processing",
+  "main": "build/index.js",
+  "scripts": {
+    "build": "tsc && node -e \"require('fs').chmodSync('build/index.js', '755')\"",
+    "dev": "ts-node src/index.ts",
+    "test": "jest"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.9.0",
+    "docx": "^8.5.0",
+    "mammoth": "^1.9.0",
+    "marked": "^12.0.2",
+    "pdf-lib": "^1.17.1"
+  },
+  "devDependencies": {
+    "@types/marked": "^5.0.2",
+    "@types/node": "^20.17.30",
+    "ts-node": "^10.9.0",
+    "typescript": "^5.0.0"
+  }
+}
